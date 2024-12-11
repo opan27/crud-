@@ -1,0 +1,29 @@
+* {
+	font-family: "Poppins", sans-serif;
+}
+
+.content-cart {
+	padding: 36px;
+}
+
+.card-cart {
+	margin-top: 10px;
+	width: 100%;
+	background: rgb(248, 246, 242);
+	border-radius: 6px;
+	display: flex;
+}
+.child-cart {
+	margin: 5px;
+}
+.action-cart {
+	margin-top: 10px;
+	float: left;
+}
+
+.btn-cart-checkout {
+	background: rgb(0, 0, 0);
+	padding: 8px;
+	text-decoration: none;
+	color: white;
+}

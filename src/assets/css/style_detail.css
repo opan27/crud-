@@ -1,0 +1,31 @@
+* {
+	font-family: "Poppins", sans-serif;
+}
+
+.container-detail {
+	padding: 32px;
+	display: flex;
+}
+.title-detail {
+	margin-top: 35px;
+}
+.paragraph-detail {
+	margin-top: 35px;
+	color: gray;
+}
+.quantity-detail {
+	margin-top: 50px;
+}
+.btn-qty {
+	padding: 6px 12px 6px 12px;
+	width: 10%;
+	background: transparent;
+	border: none;
+	cursor: pointer;
+}
+.parent-qty {
+	margin-top: 20px;
+	border: 1px solid gray;
+	width: 11%;
+	display: flex;
+}

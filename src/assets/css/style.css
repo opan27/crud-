@@ -1,0 +1,89 @@
+* {
+	font-family: "Poppins", sans-serif;
+	margin: 0;
+	padding: 0;
+}
+.nav {
+	display: flex;
+	justify-content: space-between;
+	padding: 16px;
+	align-items: center;
+}
+.nav-brand {
+	text-decoration: none;
+	font-size: 1.2rem;
+	color: #000;
+}
+.list-nav {
+	display: flex;
+	list-style-type: none;
+}
+.item-nav {
+	margin: 6px;
+}
+.nav-brand-auth-masuk {
+	padding: 8px 12px 8px 12px;
+	border: 2px solid black;
+	border-radius: 5px;
+	color: #000;
+	text-decoration: none;
+}
+.nav-brand-auth {
+	padding: 8px 12px 8px 12px;
+	background-color: black;
+	border-radius: 5px;
+	color: #fff;
+	text-decoration: none;
+}
+.container {
+	padding: 16px;
+}
+.card-favorite-migo {
+	background: #ddd;
+	width: 30%;
+	margin: 10px;
+	border-radius: 8px;
+}
+.card {
+	display: flex;
+	flex-wrap: wrap;
+}
+.btn-checkout {
+	padding: 10px;
+	justify-content: space-around;
+	display: flex;
+}
+.btn-order {
+	padding: 8px 10px;
+	background: black;
+	border: none;
+	cursor: pointer;
+	color: white;
+}
+.btn-cart {
+	padding: 8px 10px;
+	background: transparent;
+	border: 2px solid #a1a1aa;
+	cursor: pointer;
+	color: black;
+}
+.card-sign {
+	background-color: red;
+	width: 10px;
+	padding: 16px;
+}
+.detail-cart {
+	display: flex;
+}
+.card-history {
+	padding: 20px;
+	background-color: gray;
+}
+.footer {
+	padding: 10px;
+	background: black;
+	color: #fff;
+}
+.footer p {
+	text-align: center;
+}

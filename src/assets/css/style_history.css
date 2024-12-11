@@ -1,0 +1,15 @@
+* {
+	font-family: "Poppins", sans-serif;
+	margin: 0;
+	padding: 0;
+}
+.container {
+	padding: 12px;
+}
+.card-history {
+	padding: 8px 12px 8px 12px;
+	width: 50%;
+	margin: 50px auto;
+	border-radius: 8px;
+	background: rgba(20, 240, 0, 0.801);
+}
