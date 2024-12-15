@@ -55,6 +55,57 @@ if (isset($_POST["signin"])) {
 
 
     <title>Login</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+
+.card {
+  max-width: 700px;
+  width: 500px;
+  background-color: #fff;
+  padding: 25px 30px;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.card form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+
+.card form .parent input{
+  height: 45px;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  border-radius: 5px;
+  padding-left: 15px;
+  border: 1px solid #ccc;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+
+.card form .parent input:focus,
+.card form .parent input:valid{
+    border-color: #9b59b6;
+}
+    </style>
 </head>
 
 <body>
@@ -77,7 +128,7 @@ if (isset($_POST["signin"])) {
                 </div>
 
                 <div class="parent-btn">
-                    <button type="submit" name="signin" class="btn-signup">Login</button>
+                    <button type="submit" name="signin" class="btn-signup" style="background: linear-gradient(135deg, #71b7e6, #9b59b6);;">Login</button>
                     <p style="margin-top: 13px; margin-left: 20px;">Belum punya akun? <a href="signup.php" style="text-decoration: none; color: blue;">Daftar disini</a></p>
                 </div>
             </form>

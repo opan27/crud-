@@ -37,14 +37,84 @@ if (isset($_POST["signup"])) {
     <link rel="stylesheet" href="./assets/css/style_auth.css">
 
     <style>
-        .btn-admin {
-            border-radius: 6px;
-            background: darkslateblue;
-            color: #FFF;
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+        * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+        }
+        body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        background: linear-gradient(135deg, #71b7e6, #9b59b6);
+        }
+
+        .card {
+        max-width: 700px;
+        width: 100%;
+        background-color: #fff;
+        padding: 25px 30px;
+        border-radius: 5px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .card form {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 20px 0 12px 0;
+        }
+
+        .card form .parent input{
+        height: 45px;
+        width: 100%;
+        outline: none;
+        font-size: 16px;
+        border-radius: 5px;
+        padding-left: 15px;
+        border: 1px solid #ccc;
+        border-bottom-width: 2px;
+        transition: all 0.3s ease;
+        }
+
+        .card form .parent input:focus,
+        .card form .parent input:valid{
+            border-color: #9b59b6;
+        }
+
+        .card form .parent-btn {
+            height: 45px;
+            margin: 35px 0
+        }
+
+        .card form .parent-btn button{
+            border-radius: 5px;
+            border: none;
+            color: #fff;
+            font-size: 18px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            /* background: linear-gradient(135deg, #71b7e6, #9b59b6); */
+        }
+        .card form .parent-btn .btn-signup{
+            background: #71b7e6;
+        }
+        .card form .parent-btn .btn-admin{
+            border-radius: 5px;
+            background: #9b59b6;
             border: none;
             padding: 8px 10px 8px 10px;
             cursor: pointer;
         }
+
+        
     </style>
 
     <title>Sign Up</title>

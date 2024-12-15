@@ -51,89 +51,143 @@ $detail = queryData("SELECT * FROM products WHERE id_migo = '$id'")[0];
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
-        .container {
-            padding: 16px;
-        }
+        /* General Styles */
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
 
-        .column {
-            font-family: "Poppins", sans-serif;
-            text-align: center;
-        }
+body {
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    min-height: 100vh;
+    padding: 20px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    color: #333;
+}
 
-        .form-create-product {
-            display: flex;
-            justify-content: center;
-            padding: 12px;
-            border-radius: 4px;
-        }
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px;
+}
 
-        .input_control {
-            width: 100%;
-            padding: 10px 10px 10px 10px;
-            border-radius: 8px;
-            border: 1px solid gray;
+.column {
+    text-align: center;
+    margin-bottom: 40px;
+}
 
-        }
+/* Form Styling */
+.form-create-product {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
 
-        .input_control:focus {
-            border: none;
-        }
+/* Input Styles */
+.input_control {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    color: #333;
+    box-sizing: border-box;
+}
 
-        label {
-            display: block;
-            margin-top: 10px;
-            font-family: "Poppins", sans-serif;
-        }
+.input_control:focus {
+    outline: none;
+    border-color: #0056b3;
+}
 
-        .btn-product {
-            margin-top: 10px;
-            padding: 8px;
-            background: darkslateblue;
-            color: #FFFFFF;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-        }
+textarea.input_control {
+    resize: vertical;
+}
 
-        .column-card {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 4rem;
-        }
+label {
+    display: block;
+    font-size: 14px;
+    margin-top: 10px;
+    color: #555;
+}
 
-        .card-product {
-            background-color: darkslateblue;
-            padding: 10px;
-            width: 18rem;
-            margin: 4px;
-            border-radius: 5px;
-            font-family: "Poppins", sans-serif;
-            color: #fff;
-            cursor: pointer;
-        }
+/* Button Styling */
+.btn-product {
+    margin-top: 20px;
+    padding: 12px 20px;
+    background-color: darkslateblue;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
 
-        .action-product {
-            text-align: center;
-            color: #FFFFFF;
-            text-decoration: none;
-        }
+.btn-product:hover {
+    background-color: #4c6f9b;
+}
 
-        .action-product a {
-            color: #FFFFFF;
-            text-decoration: none;
-        }
+/* Link Styling */
+a {
+    text-decoration: none;
+    color: #0056b3;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
 
-        .action-product .edit-product {
-            color: black;
-            font-weight: bold;
-            text-decoration: none;
-        }
+a:hover {
+    color: #003d80;
+}
 
-        .action-product .hapus-product {
-            color: gray;
-            font-weight: bold;
-            text-decoration: none;
-        }
+small {
+    display: block;
+    margin-top: 10px;
+    color: #777;
+}
+
+/* Title Styling */
+.title-judul {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        padding: 16px;
+    }
+
+    .form-create-product {
+        padding: 20px;
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .title-judul {
+        font-size: 20px;
+    }
+
+    .input_control, .btn-product {
+        width: 100%;
+    }
+}
+
     </style>
 
 
@@ -147,7 +201,7 @@ $detail = queryData("SELECT * FROM products WHERE id_migo = '$id'")[0];
             <a href="logout.php">Logout</a>
             <br>
             <br>
-            <a href="./admin/index.php">Go Back</a>
+            <a href="index.php">Go Back</a>
             <p>You Level is: <?= $_SESSION["level"]; ?></p>
             <small>Please Create Product</small>
         </div>

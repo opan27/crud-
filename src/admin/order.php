@@ -31,26 +31,166 @@ $orderList = queryData("SELECT * FROM checkout ORDER BY id_checkout ASC");
     <link rel="stylesheet" href="../assets/css/style.css">
 
     <style>
-        .table {
-            width: 100%;
-            margin-top: 50px;
-        }
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 
-        .tbody {
-            text-align: center;
-        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
 
-        .acc-product {
-            text-decoration: none;
-            color: green;
-            font-weight: 700;
-        }
+body {
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    min-height: 100vh;
+    padding: 20px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    color: #333;
+}
 
-        .rej-product {
-            text-decoration: none;
-            color: red;
-            font-weight: 700;
-        }
+
+
+.container {
+    padding: 20px;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Header style */
+h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Link style for "Back to homepage" */
+a {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+/* Text Styling for the "Back to Main Page" link */
+a p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+    color: #000;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect on the link */
+a:hover p {
+    color: #9b59b6;
+    cursor: pointer;
+}
+
+/* Table styling */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+    font-size: 14px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.table th, .table td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.table th {
+    background-color: #9b59b6;
+    color: white;
+    font-weight: bold;
+}
+
+.table td {
+    background-color: #f9f9f9;
+}
+
+.table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.table tr:hover {
+    background-color: #ddd;
+}
+
+/* Style for the table content (tbody) */
+.tbody {
+    text-align: center;
+}
+
+/* Accept and Reject product links styling */
+.acc-product, .rej-product {
+    text-decoration: none;
+    font-weight: 700;
+    display: inline-block;
+    padding: 5px 10px;
+    margin-top: 5px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+/* Color for the accept button */
+.acc-product {
+    color: white;
+    background-color: green;
+}
+
+.acc-product:hover {
+    background-color: darkgreen;
+}
+
+/* Color for the reject button */
+.rej-product {
+    color: white;
+    background-color: red;
+}
+
+.rej-product:hover {
+    background-color: darkred;
+}
+
+/* Style for order status text */
+.table .status {
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.table .status.pending {
+    color: orange;
+}
+
+.table .status.accept {
+    color: green;
+}
+
+.table .status.reject {
+    color: red;
+}
+
+/* Small responsive design for mobile screens */
+@media (max-width: 768px) {
+    .table {
+        font-size: 12px;
+    }
+
+    .table th, .table td {
+        padding: 8px;
+    }
+
+    .acc-product, .rej-product {
+        font-size: 12px;
+        padding: 4px 8px;
+    }
+}
+
     </style>
 
     <title>List Order</title>
@@ -61,8 +201,8 @@ $orderList = queryData("SELECT * FROM checkout ORDER BY id_checkout ASC");
     <div class="container">
         <div>
             <h2 style="text-align: center;">List Pembeli</h2>
-            <a href="index.php" style="text-decoration: none; color: #000;">
-                <p style="text-align: center; margin-top: 20px;">Kembali ke halaman utama</p>
+            <a href="index.php">
+                <p style="text-align: center; margin-top: 20px; color:#007bff;">Kembali ke halaman utama</p>
             </a>
         </div>
 
